@@ -1,0 +1,116 @@
+{
+  "brand": {
+    "name": "Camacho Craft Homes"
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "testimonials": "Testimonios",
+    "faq": "Preguntas Frecuentes",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title1": "Construimos",
+    "title2": "con pasión y oficio en Guymon, OK",
+    "description": "Somos especialistas en construcción, remodelación y carpintería personalizada. Transformamos espacios con calidad, puntualidad y un servicio al cliente inigualable.",
+    "cta": "Contactar por WhatsApp"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Especialistas en hacer realidad tus proyectos",
+    "item1": {
+      "name": "Construcción Nueva",
+      "desc": "Diseñamos y construimos casas desde cero con estándares de alta calidad.",
+      "price": "Desde $150,000"
+    },
+    "item2": {
+      "name": "Remodelación Total",
+      "desc": "Renovamos cocinas, baños, sótanos o toda tu casa con un toque moderno.",
+      "price": "Desde $50,000"
+    },
+    "item3": {
+      "name": "Carpintería Fina",
+      "desc": "Muebles a medida, closets, puertas y trabajos en madera de precisión.",
+      "price": "Cotización gratis"
+    },
+    "item4": {
+      "name": "Pisos y Azulejos",
+      "desc": "Instalación profesional de porcelanato, cerámica, vinil y más.",
+      "price": "Desde $15,000"
+    }
+  },
+  "projects": {
+    "title": "Proyectos Recientes",
+    "subtitle": "Explora algunos de nuestros trabajos destacados",
+    "view": "Ver proyecto",
+    "loading": "Cargando proyectos...",
+    "item1": {
+      "name": "Casa Residencial Moderna",
+      "desc": "Construcción completa de 2,500 sq ft",
+      "tag": "Construcción Nueva"
+    },
+    "item2": {
+      "name": "Remodelación de Cocina",
+      "desc": "Transformación completa con isla central",
+      "tag": "Remodelación"
+    },
+    "item3": {
+      "name": "Closet Personalizado",
+      "desc": "Diseño a medida en madera de roble",
+      "tag": "Carpintería"
+    },
+    "item4": {
+      "name": "Piso de Madera Premium",
+      "desc": "Instalación de 1,200 sq ft de roble",
+      "tag": "Pisos"
+    }
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes",
+    "item1": {
+      "text": "Camacho Craft Homes remodeló nuestra cocina y quedó espectacular. Muy profesionales y puntuales. ¡Los recomendamos!",
+      "name": "María González",
+      "role": "Cliente de Remodelación"
+    },
+    "item2": {
+      "text": "Construyeron nuestra casa desde cero y el proceso fue transparente. Excelente comunicación y acabados de primera.",
+      "name": "John Smith",
+      "role": "Cliente de Construcción Nueva"
+    },
+    "item3": {
+      "text": "El equipo es muy amable y detallista. Hicieron un closet a medida precioso y en tiempo récord. ¡Volveré a contratarlos!",
+      "name": "Laura Pérez",
+      "role": "Cliente de Carpintería"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "q1": "¿Ofrecen cotizaciones gratis?",
+    "a1": "Sí, todas nuestras cotizaciones son completamente gratis y sin compromiso. Agenda una visita y te damos un presupuesto detallado.",
+    "q2": "¿Cuánto tiempo tarda un proyecto de remodelación?",
+    "a2": "Depende del alcance. Una remodelación de cocina típica toma entre 3 y 6 semanas. La construcción nueva puede tomar de 4 a 8 meses.",
+    "q3": "¿Están asegurados y con licencia?",
+    "a3": "Sí, contamos con todas las licencias y seguros requeridos en el estado de Oklahoma para tu tranquilidad.",
+    "q4": "¿Trabajan en toda el área de Guymon?",
+    "a4": "Sí, damos servicio en Guymon y alrededores en un radio de 50 millas.",
+    "q5": "¿Qué métodos de pago aceptan?",
+    "a5": "Aceptamos transferencias, cheque y efectivo. También ofrecemos planes de pago por etapas en proyectos grandes."
+  },
+  "contact": {
+    "title": "Contacto",
+    "address": "📍 123 Main St, Guymon, OK 73942",
+    "phone": "📞 +1 (123) 1234-1234",
+    "email": "✉️ info@camachocrafthomes.com",
+    "social": "Síguenos en redes:",
+    "clientCta": "¿Quieres ser cliente?"
+  },
+  "modal": {
+    "title": "Formulario de Cliente",
+    "name": "Nombre:",
+    "address": "Dirección:",
+    "phone": "Teléfono:",
+    "message": "Mensaje:",
+    "submit": "Enviar"
+  }
+}
