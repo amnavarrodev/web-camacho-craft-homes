@@ -1,0 +1,96 @@
+{
+  "brand": {
+    "name": "Camacho Craft Homes"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title1": "We build",
+    "title2": "your home with passion in Guymon, OK",
+    "description": "We specialize in construction, remodeling, and custom carpentry. We transform spaces with quality, punctuality, and unmatched customer service.",
+    "cta": "Contact via WhatsApp"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Specialists in making your projects come true",
+    "item1": {
+      "name": "New Construction",
+      "desc": "We design and build homes from the ground up with high-quality standards.",
+      "price": "From $150,000"
+    },
+    "item2": {
+      "name": "Full Remodeling",
+      "desc": "We renovate kitchens, bathrooms, basements, or your entire home with a modern touch.",
+      "price": "From $50,000"
+    },
+    "item3": {
+      "name": "Fine Carpentry",
+      "desc": "Custom furniture, closets, doors, and precision woodwork.",
+      "price": "Free quote"
+    },
+    "item4": {
+      "name": "Flooring & Tiles",
+      "desc": "Professional installation of porcelain, ceramic, vinyl, and more.",
+      "price": "From $15,000"
+    }
+  },
+  "projects": {
+    "title": "Recent Projects",
+    "subtitle": "Explore some of our featured work",
+    "view": "View project",
+    "loading": "Loading projects..."
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "item1": {
+      "text": "Camacho Craft Homes remodeled our kitchen and it looks spectacular. Very professional and punctual. Highly recommended!",
+      "name": "Maria Gonzalez",
+      "role": "Remodeling Client"
+    },
+    "item2": {
+      "text": "They built our house from scratch and the process was transparent. Excellent communication and top-notch finishes.",
+      "name": "John Smith",
+      "role": "New Construction Client"
+    },
+    "item3": {
+      "text": "The team is very friendly and detail-oriented. They made a beautiful custom closet in record time. I will hire them again!",
+      "name": "Laura Perez",
+      "role": "Carpentry Client"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": "Do you offer free quotes?",
+    "a1": "Yes, all our quotes are completely free and without obligation. Schedule a visit and we'll give you a detailed estimate.",
+    "q2": "How long does a remodeling project take?",
+    "a2": "It depends on the scope. A typical kitchen remodel takes between 3 and 6 weeks. New construction can take 4 to 8 months.",
+    "q3": "Are you insured and licensed?",
+    "a3": "Yes, we have all required licenses and insurance in the state of Oklahoma for your peace of mind.",
+    "q4": "Do you work throughout the Guymon area?",
+    "a4": "Yes, we serve Guymon and surrounding areas within a 50-mile radius.",
+    "q5": "What payment methods do you accept?",
+    "a5": "We accept transfers, checks, and cash. We also offer staged payment plans for large projects."
+  },
+  "contact": {
+    "title": "Contact",
+    "address": "📍 123 Main St, Guymon, OK 73942",
+    "phone": "📞 +1 (123) 1234-1234",
+    "email": "✉️ info@camachocrafthomes.com",
+    "social": "Follow us on social media:",
+    "clientCta": "Want to become a client?"
+  },
+  "modal": {
+    "title": "Client Form",
+    "name": "Name:",
+    "address": "Address:",
+    "phone": "Phone:",
+    "message": "Message:",
+    "submit": "Send"
+  }
+}

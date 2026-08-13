@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camacho Craft Homes | Guymon, OK</title>
+    <meta name="description" content="Los mejores servicios de construcción y remodelación de casas en Guymon, Oklahoma. Contáctanos por WhatsApp.">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Logo / Nombre del negocio -->
+            <a href="#inicio" class="nav-brand" data-i18n="brand.name">Camacho<span>CraftHomes</span></a>
+            
+            <!-- Menú de escritorio -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#inicio" class="nav-link" data-i18n="nav.home">Inicio</a></li>
+                <li class="nav-item"><a href="#servicios" class="nav-link" data-i18n="nav.services">Servicios</a></li>
+                <li class="nav-item"><a href="#proyectos" class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
+                <li class="nav-item"><a href="#testimonios" class="nav-link" data-i18n="nav.testimonials">Testimonios</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a></li>
+                <li class="nav-item"><a href="#contacto" class="nav-link" data-i18n="nav.contact">Contacto</a></li>
+            </ul>
+
+            <!-- Controles a la derecha -->
+            <div class="nav-controls">
+                <!-- Botón de cambio de idioma: muestra el idioma al que cambiará -->
+                <button id="lang-toggle" class="icon-btn lang-btn" aria-label="Cambiar idioma">
+                    <span id="lang-flag">🇺🇸</span>
+                    <span id="lang-text">EN</span>
+                </button>
+                <!-- Botón de modo oscuro/claro -->
+                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <!-- Hamburguesa para móviles -->
+                <button id="hamburger" class="icon-btn hamburger" aria-label="Abrir menú">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== SECCIÓN HERO (INICIO) ==================== -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" data-i18n="hero.title1">Construimos <span>tu hogar</span></h1>
+                <h2 class="hero-subtitle" data-i18n="hero.title2">con pasión y oficio en Guymon, OK</h2>
+                <p class="hero-description" data-i18n="hero.description">
+                    Somos especialistas en construcción, remodelación y carpintería personalizada. 
+                    Transformamos espacios con calidad, puntualidad y un servicio al cliente inigualable.
+                </p>
+                <!-- Botón grande de WhatsApp -->
+                <a href="https://wa.me/112312341234" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> <span data-i18n="hero.cta">Contactar por WhatsApp</span>
+                </a>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero-home.jpg" 
+                     alt="Casa construida por Camacho Craft Homes"
+                     onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22500%22 height=%22400%22 viewBox=%220 0 500 400%22%3E%3Crect width=%22500%22 height=%22400%22 fill=%22%23e2e8f0%22/%3E%3Ctext x=%22250%22 y=%22210%22 font-family=%22sans-serif%22 font-size=%2224%22 fill=%22%2364748b%22 text-anchor=%22middle%22%3ECasa de muestra%3C/text%3E%3C/svg%3E'">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN SERVICIOS ==================== -->
+    <section id="servicios" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services.title">Nuestros Servicios</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Especialistas en hacer realidad tus proyectos</p>
+            
+            <div class="grid-services">
+                <!-- Tarjeta de servicio 1 -->
+                <div class="card-service">
+                    <div class="card-img">
+                        <img src="img/services/construction.jpg" 
+                             alt="Servicio de construcción"
+                             onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect width=%22300%22 height=%22200%22 fill=%22%23d1d5db%22/%3E%3Ctext x=%22150%22 y=%22110%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%236b7280%22 text-anchor=%22middle%22%3EConstrucción%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="card-body">
+                        <h3 data-i18n="services.item1.name">Construcción Nueva</h3>
+                        <p data-i18n="services.item1.desc">Diseñamos y construimos casas desde cero con estándares de alta calidad.</p>
+                        <span class="price" data-i18n="services.item1.price">Desde $150,000</span>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de servicio 2 -->
+                <div class="card-service">
+                    <div class="card-img">
+                        <img src="img/services/remodeling.jpg" 
+                             alt="Servicio de remodelación"
+                             onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect width=%22300%22 height=%22200%22 fill=%22%23d1d5db%22/%3E%3Ctext x=%22150%22 y=%22110%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%236b7280%22 text-anchor=%22middle%22%3ERemodelación%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="card-body">
+                        <h3 data-i18n="services.item2.name">Remodelación Total</h3>
+                        <p data-i18n="services.item2.desc">Renovamos cocinas, baños, sótanos o toda tu casa con un toque moderno.</p>
+                        <span class="price" data-i18n="services.item2.price">Desde $50,000</span>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de servicio 3 -->
+                <div class="card-service">
+                    <div class="card-img">
+                        <img src="img/services/carpentry.jpg" 
+                             alt="Servicio de carpintería"
+                             onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect width=%22300%22 height=%22200%22 fill=%22%23d1d5db%22/%3E%3Ctext x=%22150%22 y=%22110%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%236b7280%22 text-anchor=%22middle%22%3ECarpintería%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="card-body">
+                        <h3 data-i18n="services.item3.name">Carpintería Fina</h3>
+                        <p data-i18n="services.item3.desc">Muebles a medida, closets, puertas y trabajos en madera de precisión.</p>
+                        <span class="price" data-i18n="services.item3.price">Cotización gratis</span>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta de servicio 4 -->
+                <div class="card-service">
+                    <div class="card-img">
+                        <img src="img/services/flooring.jpg" 
+                             alt="Servicio de pisos y azulejos"
+                             onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect width=%22300%22 height=%22200%22 fill=%22%23d1d5db%22/%3E%3Ctext x=%22150%22 y=%22110%22 font-family=%22sans-serif%22 font-size=%2218%22 fill=%22%236b7280%22 text-anchor=%22middle%22%3EPisos y Azulejos%3C/text%3E%3C/svg%3E'">
+                    </div>
+                    <div class="card-body">
+                        <h3 data-i18n="services.item4.name">Pisos y Azulejos</h3>
+                        <p data-i18n="services.item4.desc">Instalación profesional de porcelanato, cerámica, vinil y más.</p>
+                        <span class="price" data-i18n="services.item4.price">Desde $15,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN PROYECTOS ==================== -->
+    <section id="proyectos" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects.title">Proyectos Recientes</h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">Explora algunos de nuestros trabajos destacados</p>
+            
+            <!-- Los proyectos se cargarán dinámicamente desde data/projects.json -->
+            <div class="grid-projects" id="projects-container">
+                <!-- Loading spinner -->
+                <div class="loading-spinner">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <span data-i18n="projects.loading">Cargando proyectos...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN TESTIMONIOS ==================== -->
+    <section id="testimonios" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="testimonials.title">Lo que dicen nuestros clientes</h2>
+            <div class="grid-testimonials">
+                <!-- Testimonio 1 -->
+                <div class="card-testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonials.item1.text">"Camacho Craft Homes remodeló nuestra cocina y quedó espectacular. Muy profesionales y puntuales. ¡Los recomendamos!"</p>
+                    <div class="testimonial-author">
+                        <span class="avatar">👩</span>
+                        <div>
+                            <strong data-i18n="testimonials.item1.name">María González</strong>
+                            <span data-i18n="testimonials.item1.role">Cliente de Remodelación</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="card-testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonials.item2.text">"Construyeron nuestra casa desde cero y el proceso fue transparente. Excelente comunicación y acabados de primera."</p>
+                    <div class="testimonial-author">
+                        <span class="avatar">👨</span>
+                        <div>
+                            <strong data-i18n="testimonials.item2.name">John Smith</strong>
+                            <span data-i18n="testimonials.item2.role">Cliente de Construcción Nueva</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="card-testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text" data-i18n="testimonials.item3.text">"El equipo es muy amable y detallista. Hicieron un closet a medida precioso y en tiempo récord. ¡Volveré a contratarlos!"</p>
+                    <div class="testimonial-author">
+                        <span class="avatar">👩‍🦰</span>
+                        <div>
+                            <strong data-i18n="testimonials.item3.name">Laura Pérez</strong>
+                            <span data-i18n="testimonials.item3.role">Cliente de Carpintería</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN FAQ (Acordeón) ==================== -->
+    <section id="faq" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title" data-i18n="faq.title">Preguntas Frecuentes</h2>
+            <div class="accordion">
+                <!-- Pregunta 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" data-i18n="faq.q1">¿Ofrecen cotizaciones gratis?</button>
+                    <div class="accordion-content">
+                        <p data-i18n="faq.a1">Sí, todas nuestras cotizaciones son completamente gratis y sin compromiso. Agenda una visita y te damos un presupuesto detallado.</p>
+                    </div>
+                </div>
+                <!-- Pregunta 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" data-i18n="faq.q2">¿Cuánto tiempo tarda un proyecto de remodelación?</button>
+                    <div class="accordion-content">
+                        <p data-i18n="faq.a2">Depende del alcance. Una remodelación de cocina típica toma entre 3 y 6 semanas. La construcción nueva puede tomar de 4 a 8 meses.</p>
+                    </div>
+                </div>
+                <!-- Pregunta 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" data-i18n="faq.q3">¿Están asegurados y con licencia?</button>
+                    <div class="accordion-content">
+                        <p data-i18n="faq.a3">Sí, contamos con todas las licencias y seguros requeridos en el estado de Oklahoma para tu tranquilidad.</p>
+                    </div>
+                </div>
+                <!-- Pregunta 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" data-i18n="faq.q4">¿Trabajan en toda el área de Guymon?</button>
+                    <div class="accordion-content">
+                        <p data-i18n="faq.a4">Sí, damos servicio en Guymon y alrededores en un radio de 50 millas.</p>
+                    </div>
+                </div>
+                <!-- Pregunta 5 -->
+                <div class="accordion-item">
+                    <button class="accordion-header" data-i18n="faq.q5">¿Qué métodos de pago aceptan?</button>
+                    <div class="accordion-content">
+                        <p data-i18n="faq.a5">Aceptamos transferencias, cheque y efectivo. También ofrecemos planes de pago por etapas en proyectos grandes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN CONTACTO Y MAPA ==================== -->
+    <section id="contacto" class="section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
+                <p data-i18n="contact.address">📍 123 Main St, Guymon, OK 73942</p>
+                <p data-i18n="contact.phone">📞 +1 (123) 1234-1234</p>
+                <p data-i18n="contact.email">✉️ info@camachocrafthomes.com</p>
+                <p data-i18n="contact.social">Síguenos en redes:</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <!-- Botón para abrir modal de cliente -->
+                <button id="open-modal-btn" class="btn btn-secondary btn-lg" data-i18n="contact.clientCta">¿Quieres ser cliente?</button>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25817.35648758261!2d-101.4815495!3d36.6828049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x870c36b7c9d0c4d7%3A0xe0c7b74b5c4b6c8!2sGuymon%2C%20OK%2073942!5e0!3m2!1sen!2sus!4v1700000000000" 
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MODAL PARA CLIENTE ==================== -->
+    <div id="client-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 data-i18n="modal.title">Formulario de Cliente</h2>
+            <form id="client-form">
+                <label for="nombre" data-i18n="modal.name">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="direccion" data-i18n="modal.address">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                
+                <label for="telefono" data-i18n="modal.phone">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="mensaje" data-i18n="modal.message">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                
+                <button type="submit" class="btn btn-primary" data-i18n="modal.submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== BOTÓN FLOTANTE DE WHATSAPP ==================== -->
+    <a href="https://wa.me/112312341234" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/script.js"></script>
+</body>
+</html>

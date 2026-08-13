@@ -1,0 +1,160 @@
+{
+  "projects": [
+    {
+      "id": "project1",
+      "slug": "casa-residencial-moderna",
+      "featured": true,
+      "images": {
+        "main": "img/projects/project1/main.jpg",
+        "thumbnail": "img/projects/project1/main.jpg",
+        "gallery": [
+          "img/projects/project1/gallery1.jpg",
+          "img/projects/project1/gallery2.jpg"
+        ]
+      },
+      "translations": {
+        "es": {
+          "title": "Casa Residencial Moderna",
+          "tag": "Construcción Nueva",
+          "shortDescription": "Construcción completa de 2,500 sq ft",
+          "fullDescription": "Esta impresionante casa residencial moderna fue construida desde cero para una familia en Guymon. El proyecto incluyó diseño arquitectónico personalizado, construcción de 2,500 pies cuadrados, acabados de lujo y paisajismo completo. La casa cuenta con 4 habitaciones, 3 baños, cocina de concepto abierto y un patio trasero con área de entretenimiento.",
+          "specs": {
+            "area": "2,500 sq ft",
+            "duration": "6 meses",
+            "rooms": "4",
+            "cost": "$450,000"
+          }
+        },
+        "en": {
+          "title": "Modern Residential House",
+          "tag": "New Construction",
+          "shortDescription": "Complete construction of 2,500 sq ft",
+          "fullDescription": "This stunning modern residential house was built from scratch for a family in Guymon. The project included custom architectural design, 2,500 square feet of construction, luxury finishes, and complete landscaping. The house features 4 bedrooms, 3 bathrooms, an open-concept kitchen, and a backyard entertainment area.",
+          "specs": {
+            "area": "2,500 sq ft",
+            "duration": "6 months",
+            "rooms": "4",
+            "cost": "$450,000"
+          }
+        }
+      }
+    },
+    {
+      "id": "project2",
+      "slug": "remodelacion-cocina",
+      "featured": true,
+      "images": {
+        "main": "img/projects/project2/main.jpg",
+        "thumbnail": "img/projects/project2/main.jpg",
+        "gallery": [
+          "img/projects/project2/gallery1.jpg",
+          "img/projects/project2/gallery2.jpg"
+        ]
+      },
+      "translations": {
+        "es": {
+          "title": "Remodelación de Cocina",
+          "tag": "Remodelación",
+          "shortDescription": "Transformación completa con isla central",
+          "fullDescription": "Transformamos por completo esta cocina anticuada en un espacio moderno y funcional. El proyecto incluyó la demolición de paredes para crear un concepto abierto, instalación de isla central con cuarzo, gabinetes personalizados de madera de arce, electrodomésticos de acero inoxidable y iluminación LED empotrada.",
+          "specs": {
+            "area": "350 sq ft",
+            "duration": "4 semanas",
+            "rooms": "1",
+            "cost": "$65,000"
+          }
+        },
+        "en": {
+          "title": "Kitchen Remodeling",
+          "tag": "Remodeling",
+          "shortDescription": "Complete transformation with central island",
+          "fullDescription": "We completely transformed this outdated kitchen into a modern, functional space. The project included wall demolition to create an open concept, quartz central island installation, custom maple wood cabinets, stainless steel appliances, and recessed LED lighting.",
+          "specs": {
+            "area": "350 sq ft",
+            "duration": "4 weeks",
+            "rooms": "1",
+            "cost": "$65,000"
+          }
+        }
+      }
+    },
+    {
+      "id": "project3",
+      "slug": "closet-personalizado",
+      "featured": true,
+      "images": {
+        "main": "img/projects/project3/main.jpg",
+        "thumbnail": "img/projects/project3/main.jpg",
+        "gallery": [
+          "img/projects/project3/gallery1.jpg",
+          "img/projects/project3/gallery2.jpg"
+        ]
+      },
+      "translations": {
+        "es": {
+          "title": "Closet Personalizado",
+          "tag": "Carpintería",
+          "shortDescription": "Diseño a medida en madera de roble",
+          "fullDescription": "Creamos este elegante closet personalizado utilizando madera de roble de primera calidad. El diseño incluye áreas de almacenamiento inteligente, iluminación interior automática, cajones con cierre suave, zapatero giratorio y un espejo de cuerpo entero integrado.",
+          "specs": {
+            "area": "120 sq ft",
+            "duration": "2 semanas",
+            "rooms": "1",
+            "cost": "$25,000"
+          }
+        },
+        "en": {
+          "title": "Custom Closet",
+          "tag": "Carpentry",
+          "shortDescription": "Custom design in oak wood",
+          "fullDescription": "We created this elegant custom closet using premium oak wood. The design includes smart storage areas, automatic interior lighting, soft-close drawers, rotating shoe rack, and an integrated full-length mirror.",
+          "specs": {
+            "area": "120 sq ft",
+            "duration": "2 weeks",
+            "rooms": "1",
+            "cost": "$25,000"
+          }
+        }
+      }
+    },
+    {
+      "id": "project4",
+      "slug": "piso-madera-premium",
+      "featured": true,
+      "images": {
+        "main": "img/projects/project4/main.jpg",
+        "thumbnail": "img/projects/project4/main.jpg",
+        "gallery": [
+          "img/projects/project4/gallery1.jpg",
+          "img/projects/project4/gallery2.jpg"
+        ]
+      },
+      "translations": {
+        "es": {
+          "title": "Piso de Madera Premium",
+          "tag": "Pisos",
+          "shortDescription": "Instalación de 1,200 sq ft de roble",
+          "fullDescription": "Instalamos 1,200 pies cuadrados de piso de madera de roble premium en toda la planta principal. El trabajo incluyó nivelación del subsuelo, instalación de barrera de humedad, colocación de tablones con acabado mate y rodapiés a juego.",
+          "specs": {
+            "area": "1,200 sq ft",
+            "duration": "3 semanas",
+            "rooms": "5",
+            "cost": "$35,000"
+          }
+        },
+        "en": {
+          "title": "Premium Wood Flooring",
+          "tag": "Flooring",
+          "shortDescription": "Installation of 1,200 sq ft of oak",
+          "fullDescription": "We installed 1,200 square feet of premium oak wood flooring throughout the main floor. The work included subfloor leveling, moisture barrier installation, matte finish plank placement, and matching baseboards.",
+          "specs": {
+            "area": "1,200 sq ft",
+            "duration": "3 weeks",
+            "rooms": "5",
+            "cost": "$35,000"
+          }
+        }
+      }
+    }
+  ]
+}

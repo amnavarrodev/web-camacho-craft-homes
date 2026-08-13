@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto - Camacho Craft Homes</title>
+    <meta name="description" content="Detalles del proyecto - Camacho Craft Homes">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Barra de navegación simplificada para páginas de proyecto -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-brand">Camacho<span>CraftHomes</span></a>
+            <div class="nav-controls">
+                <!-- Botón de cambio de idioma: muestra el idioma al que cambiará -->
+                <button id="lang-toggle" class="icon-btn lang-btn" aria-label="Cambiar idioma">
+                    <span id="lang-flag">🇺🇸</span>
+                    <span id="lang-text">EN</span>
+                </button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido del proyecto se cargará dinámicamente -->
+    <main class="project-page" id="project-content">
+        <div class="loading-spinner">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            <span>Cargando proyecto...</span>
+        </div>
+    </main>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/112312341234" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Variables globales para la página de proyecto
+        let currentProject = null;
+        let currentLang = localStorage.getItem('lang') || 'es';
+        
+        // Función para actualizar el botón de idioma
+        function updateLangButton(lang) {
+            const flagSpan = document.getElementById('lang-flag');
+            const textSpan = document.getElementById('lang-text');
+            
+            if (lang === 'es') {
+                flagSpan.textContent = '🇺🇸';
+                textSpan.textContent = 'EN';
+            } else {
+                flagSpan.textContent = '🇲🇽';
+                textSpan.textContent = 'ES';
+            }
+        }
+        
+        // Función para cambiar el idioma
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            localStorage.setItem('lang', currentLang);
+            updateLangButton(currentLang);
+            
+            if (currentProject) {
+                renderProject(currentProject, currentLang);
+            }
+        }
+        
+        // Función para cambiar el tema
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            const icon = document.querySelector('#theme-toggle i');
+            if (newTheme === 'dark') {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+        
+        // Función para renderizar el proyecto
+        function renderProject(project, lang) {
+            const translation = project.translations[lang] || project.translations.es;
+            const container = document.getElementById('project-content');
+            
+            document.title = `${translation.title} - Camacho Craft Homes`;
+            
+            // Construir galería
+            const galleryHTML = project.images.gallery.map((img, index) => {
+                return `
+                    <img src="${img}" 
+                         alt="${translation.title} - Galería ${index + 1}"
+                         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22%3E%3Crect width=%22300%22 height=%22200%22 fill=%22%23d1d5db%22/%3E%3C/svg%3E'">
+                `;
+            }).join('');
+            
+            // Construir especificaciones
+            const specLabels = {
+                area: lang === 'es' ? 'Pies cuadrados' : 'Square feet',
+                duration: lang === 'es' ? 'Duración' : 'Duration',
+                rooms: lang === 'es' ? 'Habitaciones' : 'Rooms',
+                cost: lang === 'es' ? 'Costo total' : 'Total cost'
+            };
+            
+            const specsHTML = Object.entries(translation.specs).map(([key, value]) => {
+                return `
+                    <div class="spec-item">
+                        <strong>${value}</strong>
+                        <span>${specLabels[key] || key}</span>
+                    </div>
+                `;
+            }).join('');
+            
+            container.innerHTML = `
+                <div class="project-hero">
+                    <img src="${project.images.main}" 
+                         alt="${translation.title}"
+                         onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22400%22 viewBox=%220 0 1200 400%22%3E%3Crect width=%221200%22 height=%22400%22 fill=%22%23d1d5db%22/%3E%3Ctext x=%22600%22 y=%22210%22 font-family=%22sans-serif%22 font-size=%2230%22 fill=%22%236b7280%22 text-anchor=%22middle%22%3E${translation.title}%3C/text%3E%3C/svg%3E'">
+                    <div class="project-hero-overlay">
+                        <h1>${translation.title}</h1>
+                        <span class="project-tag">${translation.tag}</span>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <a href="../index.html" class="back-link">
+                        <i class="fa-solid fa-arrow-left"></i> 
+                        ${lang === 'es' ? 'Volver al inicio' : 'Back to home'}
+                    </a>
+                    
+                    <p class="project-description">${translation.fullDescription}</p>
+
+                    <div class="project-specs">
+                        <h2>${lang === 'es' ? 'Especificaciones del Proyecto' : 'Project Specifications'}</h2>
+                        <div class="specs-grid">
+                            ${specsHTML}
+                        </div>
+                    </div>
+
+                    <div class="project-gallery">
+                        ${galleryHTML}
+                    </div>
+
+                    <a href="https://wa.me/112312341234" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i> 
+                        ${lang === 'es' ? '¿Quieres un proyecto similar?' : 'Want a similar project?'}
+                    </a>
+                </div>
+            `;
+        }
+        
+        // Función para mostrar errores
+        function showError(message) {
+            const container = document.getElementById('project-content');
+            container.innerHTML = `
+                <div class="error-message" style="text-align: center; padding: 50px 20px;">
+                    <i class="fa-solid fa-exclamation-circle" style="font-size: 3rem; color: #ef4444;"></i>
+                    <p style="margin-top: 20px; font-size: 1.2rem;">${message}</p>
+                    <a href="../index.html" class="btn btn-primary" style="margin-top: 20px;">
+                        Volver al inicio
+                    </a>
+                </div>
+            `;
+        }
+        
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Configurar botones
+            document.getElementById('lang-toggle').addEventListener('click', toggleLanguage);
+            document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+            
+            // Aplicar tema guardado
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            const themeIcon = document.querySelector('#theme-toggle i');
+            if (savedTheme === 'dark') {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+            
+            // Actualizar botón de idioma
+            updateLangButton(currentLang);
+            
+            // Obtener el ID del proyecto de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            
+            if (!projectId) {
+                showError('No se especificó un proyecto');
+                return;
+            }
+            
+            // Cargar proyectos
+            try {
+                const response = await fetch('../data/projects.json');
+                const data = await response.json();
+                currentProject = data.projects.find(p => p.id === projectId);
+                
+                if (!currentProject) {
+                    showError('Proyecto no encontrado');
+                    return;
+                }
+                
+                // Renderizar proyecto con el idioma guardado
+                renderProject(currentProject, currentLang);
+                
+            } catch (error) {
+                console.error('Error cargando proyecto:', error);
+                showError('Error al cargar el proyecto');
+            }
+        });
+    </script>
+</body>
+</html>
