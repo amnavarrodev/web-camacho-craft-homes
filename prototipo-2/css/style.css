@@ -174,17 +174,14 @@ ul {
     background-color: var(--color-hover);
 }
 
-/* Ajustes específicos para el botón de idioma */
+/* Botón de idioma con banderas emoji */
 .lang-btn {
-    border-radius: 20px;
-    padding: 8px 12px;
-    background-color: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
+    gap: 6px;
+    font-size: 1.1rem;
 }
 
-.flag-icon {
-    font-size: 1.3rem;
-    display: inline-block;
+#lang-flag {
+    font-size: 1.5rem;
     line-height: 1;
 }
 
@@ -314,14 +311,14 @@ ul {
     color: var(--color-primary);
 }
 
-/* ==================== GRID DE PORTAFOLIO (NUEVO) ==================== */
-.grid-portfolio {
+/* ==================== GRID DE PROYECTOS (NUEVA SECCIÓN) ==================== */
+.grid-projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
-.card-portfolio {
+.card-project {
     background-color: var(--color-card-bg);
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -329,55 +326,81 @@ ul {
     transition: var(--transition);
     border: 1px solid var(--color-border);
     display: block;
-}
-.card-portfolio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-.portfolio-img {
+.card-project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-img {
     position: relative;
     overflow: hidden;
-    height: 250px;
+    height: 300px;
 }
 
-.portfolio-img img {
+.project-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.card-portfolio:hover .portfolio-img img {
-    transform: scale(1.1);
+.card-project:hover .project-img img {
+    transform: scale(1.05);
 }
 
-.portfolio-body {
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 99, 235, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.card-project:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay span {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: var(--border-radius);
+}
+
+.project-info {
     padding: 20px;
 }
 
-.portfolio-body h3 {
+.project-info h3 {
     font-size: 1.3rem;
     margin-bottom: 8px;
-    color: var(--color-text);
 }
 
-.portfolio-body p {
+.project-info p {
     color: var(--color-text-muted);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-bottom: 12px;
 }
 
-.portfolio-tag {
+.project-tag {
     display: inline-block;
-    padding: 4px 12px;
     background-color: var(--color-primary);
     color: white;
+    padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 /* ==================== GRID DE TESTIMONIOS ==================== */
@@ -602,6 +625,129 @@ ul {
     background-color: #20ba5a;
 }
 
+/* ==================== PÁGINAS DE PROYECTOS ==================== */
+.project-page {
+    padding-top: var(--navbar-height);
+    min-height: 100vh;
+    background-color: var(--color-bg);
+}
+
+.project-hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.project-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 40px 20px;
+    color: white;
+}
+
+.project-hero-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.project-hero-overlay .project-tag {
+    background-color: var(--color-primary);
+}
+
+.project-details {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 30px;
+}
+
+.project-specs {
+    background-color: var(--color-bg-alt);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid var(--color-border);
+}
+
+.project-specs h2 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.spec-item {
+    text-align: center;
+}
+
+.spec-item strong {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.spec-item span {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-gallery img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+.back-link i {
+    margin-right: 8px;
+}
+
 /* ==================== RESPONSIVE (Mobile First) ==================== */
 /* Móviles (hasta 480px) */
 @media (max-width: 480px) {
@@ -612,14 +758,15 @@ ul {
     .card-img img {
         height: 120px;
     }
+    .grid-projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .project-img {
+        height: 200px;
+    }
     .grid-testimonials {
         grid-template-columns: 1fr;
-    }
-    .grid-portfolio {
-        grid-template-columns: 1fr;
-    }
-    .portfolio-img {
-        height: 200px;
     }
     .hero-content {
         flex-direction: column;
@@ -635,6 +782,12 @@ ul {
     }
     .container {
         padding: 0 15px;
+    }
+    .project-hero {
+        height: 250px;
+    }
+    .project-hero-overlay h1 {
+        font-size: 1.8rem;
     }
 }
 
@@ -658,7 +811,6 @@ ul {
         transition: max-height 0.4s ease-in-out;
         box-shadow: var(--shadow);
         border-bottom: 1px solid var(--color-border);
-        z-index: 999;
     }
     .nav-menu.active {
         max-height: 500px;
@@ -675,10 +827,10 @@ ul {
     .grid-services {
         grid-template-columns: 1fr 1fr;
     }
-    .grid-testimonials {
+    .grid-projects {
         grid-template-columns: 1fr;
     }
-    .grid-portfolio {
+    .grid-testimonials {
         grid-template-columns: 1fr;
     }
 }
@@ -688,10 +840,10 @@ ul {
     .grid-services {
         grid-template-columns: repeat(4, 1fr);
     }
-    .grid-testimonials {
-        grid-template-columns: repeat(3, 1fr);
+    .grid-projects {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .grid-portfolio {
+    .grid-testimonials {
         grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -5,7 +5,7 @@
   "nav": {
     "home": "Home",
     "services": "Services",
-    "portfolio": "Portfolio",
+    "projects": "Projects",
     "testimonials": "Testimonials",
     "faq": "FAQ",
     "contact": "Contact"
@@ -40,25 +40,29 @@
       "price": "From $15,000"
     }
   },
-  "portfolio": {
-    "title": "Recent Work",
-    "subtitle": "Explore some of our featured projects",
-    "tag": {
-      "construction": "Construction",
-      "remodeling": "Remodeling",
-      "carpentry": "Carpentry"
-    },
+  "projects": {
+    "title": "Recent Projects",
+    "subtitle": "Explore some of our featured work",
+    "view": "View project",
     "item1": {
-      "title": "Modern House in Guymon",
-      "desc": "Complete construction of 3 bedrooms with contemporary design"
+      "name": "Modern Residential House",
+      "desc": "Complete construction of 2,500 sq ft",
+      "tag": "New Construction"
     },
     "item2": {
-      "title": "Kitchen Remodeling",
-      "desc": "Complete transformation with central island and premium finishes"
+      "name": "Kitchen Remodeling",
+      "desc": "Complete transformation with central island",
+      "tag": "Remodeling"
     },
     "item3": {
-      "title": "Custom Closet",
-      "desc": "Custom closet with oak wood and imported hardware"
+      "name": "Custom Closet",
+      "desc": "Custom design in oak wood",
+      "tag": "Carpentry"
+    },
+    "item4": {
+      "name": "Premium Wood Flooring",
+      "desc": "Installation of 1,200 sq ft of oak",
+      "tag": "Flooring"
     }
   },
   "testimonials": {

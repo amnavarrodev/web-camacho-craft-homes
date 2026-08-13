@@ -6,28 +6,19 @@ let currentLang = localStorage.getItem('lang') || DEFAULT_LANG;
 // ==================== GESTIÓN DE IDIOMAS ====================
 // Cargar archivos JSON de idiomas desde la carpeta /locales/
 async function loadTranslations(lang) {
-    try {
-        const response = await fetch(`locales/${lang}.json`);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return await response.json();
-    } catch (error) {
-        console.error('Error loading translations:', error);
-        return null;
+    const response = await fetch(`locales/${lang}.json`);
+    if (!response.ok) {
+        console.error(`No se pudo cargar el idioma ${lang}`);
+        return {};
     }
+    return await response.json();
 }
 
 // Aplicar traducciones al DOM
 function applyTranslations(translations) {
-    if (!translations) return;
-    
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
-        const translation = key.split('.').reduce((obj, k) => {
-            return obj ? obj[k] : null;
-        }, translations);
-        
+        const translation = key.split('.').reduce((obj, k) => obj && obj[k], translations);
         if (translation) {
             element.textContent = translation;
         }
@@ -39,30 +30,23 @@ function updateLangButton(lang) {
     const flagSpan = document.getElementById('lang-flag');
     const textSpan = document.getElementById('lang-text');
     
-    if (!flagSpan || !textSpan) return;
-    
     if (lang === 'es') {
-        flagSpan.textContent = '🇲🇽';
+        flagSpan.textContent = '🇲🇽';  // Bandera de México
         textSpan.textContent = 'ES';
-        document.documentElement.lang = 'es';
     } else {
-        flagSpan.textContent = '🇺🇸';
+        flagSpan.textContent = '🇺🇸';  // Bandera de USA
         textSpan.textContent = 'EN';
-        document.documentElement.lang = 'en';
     }
 }
 
 // Cambiar idioma
 async function setLanguage(lang) {
     const translations = await loadTranslations(lang);
-    if (translations) {
-        applyTranslations(translations);
-        currentLang = lang;
-        localStorage.setItem('lang', lang);
-        updateLangButton(lang);
-    } else {
-        console.error('Failed to load translations for:', lang);
-    }
+    applyTranslations(translations);
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    updateLangButton(lang);
+    document.documentElement.lang = lang;
 }
 
 // ==================== GESTIÓN DE TEMA (oscuro/claro) ====================
@@ -71,14 +55,12 @@ function setTheme(theme) {
     localStorage.setItem('theme', theme);
     // Cambiar icono del botón
     const icon = document.querySelector('#theme-toggle i');
-    if (icon) {
-        if (theme === 'dark') {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        } else {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        }
+    if (theme === 'dark') {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    } else {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
     }
 }
 
@@ -86,9 +68,6 @@ function setTheme(theme) {
 function setupHamburgerMenu() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
-    
-    if (!hamburger || !navMenu) return;
-    
     const icon = hamburger.querySelector('i');
 
     hamburger.addEventListener('click', () => {
@@ -107,10 +86,8 @@ function setupHamburgerMenu() {
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
-            if (icon) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
         });
     });
 }
@@ -166,20 +143,6 @@ function setupModal() {
     });
 }
 
-// ==================== MANEJAR ERRORES DE IMÁGENES ====================
-function setupImageFallbacks() {
-    document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('error', function() {
-            // Crear SVG placeholder si la imagen falla
-            const placeholder = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23e2e8f0'/%3E%3Ctext x='300' y='210' font-family='sans-serif' font-size='20' fill='%2364748b' text-anchor='middle'%3EImagen no disponible%3C/text%3E%3C/svg%3E`;
-            
-            // Evitar loop infinito
-            this.onerror = null;
-            this.src = placeholder;
-        });
-    });
-}
-
 // ==================== INICIALIZACIÓN ====================
 document.addEventListener('DOMContentLoaded', async () => {
     // 1. Cargar idioma guardado o por defecto
@@ -193,7 +156,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupHamburgerMenu();
     setupAccordion();
     setupModal();
-    setupImageFallbacks();
 
     // 4. Evento para cambiar idioma
     const langToggle = document.getElementById('lang-toggle');
@@ -213,9 +175,4 @@ document.addEventListener('DOMContentLoaded', async () => {
             setTheme(newTheme);
         });
     }
-
-    // 6. Log para debug
-    console.log('Camacho Craft Homes - Página cargada correctamente');
-    console.log('Idioma actual:', currentLang);
-    console.log('Tema actual:', document.documentElement.getAttribute('data-theme'));
 });

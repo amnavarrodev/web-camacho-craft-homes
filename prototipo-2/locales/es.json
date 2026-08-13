@@ -5,7 +5,7 @@
   "nav": {
     "home": "Inicio",
     "services": "Servicios",
-    "portfolio": "Portafolio",
+    "projects": "Proyectos",
     "testimonials": "Testimonios",
     "faq": "Preguntas Frecuentes",
     "contact": "Contacto"
@@ -40,25 +40,29 @@
       "price": "Desde $15,000"
     }
   },
-  "portfolio": {
-    "title": "Trabajos Recientes",
-    "subtitle": "Explora algunos de nuestros proyectos destacados",
-    "tag": {
-      "construction": "Construcción",
-      "remodeling": "Remodelación",
-      "carpentry": "Carpintería"
-    },
+  "projects": {
+    "title": "Proyectos Recientes",
+    "subtitle": "Explora algunos de nuestros trabajos destacados",
+    "view": "Ver proyecto",
     "item1": {
-      "title": "Casa Moderna en Guymon",
-      "desc": "Construcción completa de 3 habitaciones con diseño contemporáneo"
+      "name": "Casa Residencial Moderna",
+      "desc": "Construcción completa de 2,500 sq ft",
+      "tag": "Construcción Nueva"
     },
     "item2": {
-      "title": "Remodelación de Cocina",
-      "desc": "Transformación completa con isla central y acabados premium"
+      "name": "Remodelación de Cocina",
+      "desc": "Transformación completa con isla central",
+      "tag": "Remodelación"
     },
     "item3": {
-      "title": "Closet Personalizado",
-      "desc": "Closet a medida con madera de roble y herrajes importados"
+      "name": "Closet Personalizado",
+      "desc": "Diseño a medida en madera de roble",
+      "tag": "Carpintería"
+    },
+    "item4": {
+      "name": "Piso de Madera Premium",
+      "desc": "Instalación de 1,200 sq ft de roble",
+      "tag": "Pisos"
     }
   },
   "testimonials": {
